@@ -5,6 +5,12 @@
   <%= @album.title %>
 </p>
 
+<ul>
+  <% @album.artists.each do |artist| %>
+    <li><%= artist.name %></li>
+    <% end %>
+</ul>
+
 <p>
   <strong>Genre:</strong>
   <%= @album.genre %>

@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :artist_id %><br>
+    <%= f.collection_check_boxes(:artist_ids, @artists, :id, :name) %>
+  </div>
+
+  <div class="field">
     <%= form.label :genre %>
     <%= form.text_field :genre %>
   </div>
