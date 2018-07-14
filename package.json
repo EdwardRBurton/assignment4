@@ -1,0 +1,5 @@
+{
+  "name": "production",
+  "private": true,
+  "dependencies": {}
+}
