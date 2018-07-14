@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :artist_id %><br>
-    <%= form.collection_check_boxes(:artist_ids, @artists, :id, :name) %>
+    <%= form.collection_select(:artist_id, @artist, :id, :name) %>
   </div>
 
   <div class="field">
@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :label_id %>
-    <%= form.collection_select :label_id, label.all, :id, :name %>
+
   </div>
 
   <div class="actions">
