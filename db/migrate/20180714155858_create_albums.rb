@@ -3,7 +3,7 @@ class CreateAlbums < ActiveRecord::Migration[5.2]
     create_table :albums do |t|
       t.string :title
       t.string :genre
-      t.ineteger :year
+      t.integer :year
       t.integer :plays
       t.references :label, foreign_key: true
 
