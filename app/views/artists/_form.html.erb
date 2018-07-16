@@ -19,7 +19,10 @@
 
   <div class="field">
     <%= form.label :album_id %>
-    <%= form.text_field :album_id %>
+    <% if Album.all != [] %>
+    <%= form.select("album", "id", Album.all.collect {|p| [ p.name, p.id ]}) %>
+    <% end %>
+
   </div>
 
   <div class="actions">
