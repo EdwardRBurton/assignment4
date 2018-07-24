@@ -18,9 +18,14 @@
   </div>
 
   <div class="field">
-    <%= form.label :album_id %>
+  <%= form.label :started %>
+  <%= form.text_field :started %>
+  </div>
+  </div>
+
+  <div class="field">
     <% if Album.all != [] %>
-    <%= form.select("album", "id", Album.all.collect {|p| [ p.name, p.id ]}) %>
+    <%= select("album", "id", Album.all.collect {|p| [ p.title, p.id ]}) %>
     <% end %>
 
   </div>

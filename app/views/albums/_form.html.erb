@@ -37,7 +37,6 @@
   </div>
 
   <div class="field">
-    <%= form.label :label_id %>
     <%= form.select(:label_id, Label.all.collect {|p| [ p.name, p.id ]}) %>
   </div>
 
