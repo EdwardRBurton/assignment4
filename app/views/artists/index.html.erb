@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Artists</h1>
+<%= form_tag(search_artists_url, method: 'get') do %>
+  <%= csp_meta_tag %>
+  <%= label_tag(:q, 'Search for:') %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag('Search') %>
+<% end %>
 
 <table>
   <thead>

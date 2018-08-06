@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Labels</h1>
-
+<%= form_tag(search_labels_url, method: 'get') do %>
+  <%= csp_meta_tag %>
+  <%= label_tag(:q, 'Search for:') %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag('Search') %>
+<% end %>
 <table>
   <thead>
     <tr>

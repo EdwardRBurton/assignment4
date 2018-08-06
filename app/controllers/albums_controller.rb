@@ -7,6 +7,11 @@ class AlbumsController < ApplicationController
     @albums = Album.all
   end
 
+  def search
+    @albums = Album.where("title like ?", "%#{params[:q]}%")
+    render :index
+  end
+
   # GET /albums/1
   # GET /albums/1.json
   def show
