@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :artist_id %><br>
-    <%= form.collection_select(:artist_id, Artist.all, :id, :name) %>
+    <%= form.collection_select(:artist_ids, Artist.all, :id, :name) %>
   </div>
 
   <div class="field">
