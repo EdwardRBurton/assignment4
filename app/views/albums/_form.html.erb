@@ -18,7 +18,7 @@
 
   <div class="field">
     <%= form.label :artist_id %><br>
-    <%= form.select(:artist_id, Artist.all.collect {|p| [ p.name, p.id ]}) %>
+    <%= form.collection_select(:artist_id, Artist.all, :id, :name) %>
   </div>
 
   <div class="field">
@@ -37,6 +37,7 @@
   </div>
 
   <div class="field">
+    <%= form.label :label_id %>
     <%= form.select(:label_id, Label.all.collect {|p| [ p.name, p.id ]}) %>
   </div>
 
